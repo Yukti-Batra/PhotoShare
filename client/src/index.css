@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-primary-50 text-primary-900 dark:bg-primary-900 dark:text-primary-50;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-instagram-blue hover:bg-opacity-90 text-white px-4 py-2 rounded-md font-medium transition-colors;
+  }
+
+  .btn-secondary {
+    @apply bg-primary-200 hover:bg-primary-300 dark:bg-primary-800 dark:hover:bg-primary-700 text-primary-800 dark:text-primary-200 px-4 py-2 rounded-md font-medium transition-colors;
+  }
+
+  .card {
+    @apply bg-white dark:bg-primary-800 rounded-lg shadow-sm p-5;
+  }
+
+  .form-input {
+    @apply w-full px-3 py-2 border border-primary-300 dark:border-primary-700 rounded-md shadow-sm focus:ring-instagram-blue focus:border-instagram-blue bg-white dark:bg-primary-800 text-primary-900 dark:text-primary-100;
+  }
+
+  .nav-link {
+    @apply px-3 py-2 rounded-md text-primary-600 dark:text-primary-300 hover:bg-primary-50 dark:hover:bg-primary-700 flex items-center;
+  }
+
+  .nav-link-active {
+    @apply bg-primary-100 dark:bg-primary-700 text-primary-900 dark:text-white;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer utilities {
+  .animate-fade-in-down {
+    animation: fadeInDown 0.3s ease-out forwards;
+  }
+}
