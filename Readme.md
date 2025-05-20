@@ -1,4 +1,4 @@
-# Instagram MVP
+# PhotoShare
 
 A simplified Instagram clone implementing core features of photo sharing and social interaction.
 
@@ -48,7 +48,7 @@ A simplified Instagram clone implementing core features of photo sharing and soc
 1. Navigate to the server directory:
 
    ```bash
-   cd instagram-mvp/server
+   cd photoshare/server
    ```
 
 2. Install dependencies:
@@ -60,7 +60,7 @@ A simplified Instagram clone implementing core features of photo sharing and soc
 3. Create a `.env` file with your configurations:
 
    ```
-   DATABASE_URL="mysql://username:password@localhost:3306/instagram_mvp"
+   DATABASE_URL="mysql://username:password@localhost:3306/photoshare"
    JWT_SECRET="your-jwt-secret-key"
    CLOUDINARY_CLOUD_NAME="your-cloud-name"
    CLOUDINARY_API_KEY="your-api-key"
@@ -84,7 +84,7 @@ A simplified Instagram clone implementing core features of photo sharing and soc
 1. Navigate to the client directory:
 
    ```bash
-   cd instagram-mvp/client
+   cd photoshare/client
    ```
 
 2. Install dependencies:
